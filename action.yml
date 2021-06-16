@@ -1,0 +1,13 @@
+name: 'Flame Format'
+description: 'An opinionated action that validates a Flutter project code format'
+author: 'flame-engine'
+
+branding:
+  color: red
+  icon: code
+
+runs:
+  using: 'composite'
+  steps:
+    - run: ${{ github.action_path }}/scripts/format.sh
+      shell: bash
