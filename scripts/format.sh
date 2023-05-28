@@ -7,9 +7,9 @@ else
 fi
 
 function run_format() {
-  FORMAT_ISSUES=$(flutter format $params -n .)
+  FORMAT_ISSUES=$(dart format $params -n .)
   if [ $? -eq 1 ]; then
-    echo "flutter format issues on"
+    echo "dart format issues on"
     echo $FORMAT_ISSUES
     exit 1
   fi
